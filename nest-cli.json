@@ -1,8 +1,32 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/API_GATEWAY/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/API_GATEWAY/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/API_GATEWAY",
+  "projects": {
+    "API_GATEWAY": {
+      "type": "application",
+      "root": "apps/API_GATEWAY",
+      "entryFile": "main",
+      "sourceRoot": "apps/API_GATEWAY/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/API_GATEWAY/tsconfig.app.json"
+      }
+    },
+    "taks-product": {
+      "type": "application",
+      "root": "apps/taks-product",
+      "entryFile": "main",
+      "sourceRoot": "apps/taks-product/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/taks-product/tsconfig.app.json"
+      }
+    }
   }
 }
