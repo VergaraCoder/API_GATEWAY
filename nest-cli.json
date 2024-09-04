@@ -1,24 +1,25 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/API_GATEWAY/src",
+  "sourceRoot": "apps/api-gateway/src",
   "compilerOptions": {
     "deleteOutDir": true,
     "webpack": true,
-    "tsConfigPath": "apps/API_GATEWAY/tsconfig.app.json"
+    "tsConfigPath": "apps/project/tsconfig.app.json"
   },
   "monorepo": true,
-  "root": "apps/API_GATEWAY",
+  "root": "apps/project",
   "projects": {
-    "API_GATEWAY": {
+    "project": {
       "type": "application",
-      "root": "apps/API_GATEWAY",
+      "root": "apps/project",
       "entryFile": "main",
-      "sourceRoot": "apps/API_GATEWAY/src",
+      "sourceRoot": "apps/api-gateway/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/API_GATEWAY/tsconfig.app.json"
+        "tsConfigPath": "apps/project/tsconfig.app.json"
       }
     },
+<<<<<<< HEAD
     "user-service": {
       "type": "application",
       "root": "apps/user-service",
@@ -26,6 +27,24 @@
       "sourceRoot": "apps/user-service/src",
       "compilerOptions": {
         "tsConfigPath": "apps/user-service/tsconfig.app.json"
+=======
+    "api-gateway": {
+      "type": "application",
+      "root": "apps/api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-gateway/tsconfig.app.json"
+      }
+    },
+    "service-product": {
+      "type": "application",
+      "root": "apps/service-product",
+      "entryFile": "main",
+      "sourceRoot": "apps/service-product/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/service-product/tsconfig.app.json"
+>>>>>>> feature/jhonatan
       }
     }
   }
