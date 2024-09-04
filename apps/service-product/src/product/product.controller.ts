@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common';
-import { MessagePattern, Payload } from '@nestjs/microservices';
+import { EventPattern, MessagePattern, Payload } from '@nestjs/microservices';
 import { ProductService } from './product.service';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
@@ -9,11 +9,13 @@ export class ProductController {
   constructor(private readonly productService: ProductService) {}
 
   @MessagePattern('hola')
-  create(@Payload() createProductDto: CreateProductDto) {
-    return this.productService.create(createProductDto);
+  create() {
+    console.log("entramos al servicio");
+    
+    return "hola";
   }
 
-  @MessagePattern('findAllProduct')
+  @MessagePattern('getProduct')
   findAll() {
     return this.productService.findAll();
   }

@@ -1,13 +1,13 @@
 import { Module } from '@nestjs/common';
-import { ApiGatewayController } from './api-gateway.controller';
-import { ApiGatewayService } from './api-gateway.service';
+import { ServiceUserController } from './service-user.controller';
+import { ServiceUserService } from './service-user.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
   imports: [
     ClientsModule.register([
       {
-        name: 'USER_SERVICE',
+        name: 'PRODUCT_SERVICE',
         transport: Transport.NATS,
         options: {
           servers: ['nats://localhost:4222'],
@@ -15,7 +15,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
       },
     ])
   ],
-  controllers: [ApiGatewayController],
-  providers: [ApiGatewayService],
+  controllers: [ServiceUserController],
+  providers: [ServiceUserService],
 })
-export class ApiGatewayModule {}
+export class ServiceUserModule {}
