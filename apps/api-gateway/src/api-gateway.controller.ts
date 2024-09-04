@@ -15,7 +15,7 @@ export class ApiGatewayController {
 
   @Get("user")
   getHello2(){
-    const data=this.client2.send("hola2",{});
+    const data=this.client2.send("createUser",{});
     return data;
   }
 }
