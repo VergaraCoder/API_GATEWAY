@@ -19,15 +19,6 @@
         "tsConfigPath": "apps/project/tsconfig.app.json"
       }
     },
-<<<<<<< HEAD
-    "user-service": {
-      "type": "application",
-      "root": "apps/user-service",
-      "entryFile": "main",
-      "sourceRoot": "apps/user-service/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/user-service/tsconfig.app.json"
-=======
     "api-gateway": {
       "type": "application",
       "root": "apps/api-gateway",
@@ -44,7 +35,6 @@
       "sourceRoot": "apps/service-product/src",
       "compilerOptions": {
         "tsConfigPath": "apps/service-product/tsconfig.app.json"
->>>>>>> feature/jhonatan
       }
     }
   }
