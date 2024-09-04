@@ -1,14 +1,14 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { TaksProductModule } from './../src/taks-product.module';
+import { ApiGatewayModule } from './../src/api-gateway.module';
 
-describe('TaksProductController (e2e)', () => {
+describe('ApiGatewayController (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [TaksProductModule],
+      imports: [ApiGatewayModule],
     }).compile();
 
     app = moduleFixture.createNestApplication();
