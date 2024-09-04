@@ -10,6 +10,10 @@ export class ProductController {
 
   @MessagePattern('hola')
   create(@Payload() createProductDto: CreateProductDto) {
+    console.log("la data que llego al sevicio de product es :");
+    
+    console.log(createProductDto);
+    
     return this.productService.create(createProductDto);
   }
 
