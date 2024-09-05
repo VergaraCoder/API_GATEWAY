@@ -1,0 +1,8 @@
+name: pipeline Richie Lint
+en:
+  push:
+    branches:
+      - feature/jhonatan
+join: 
+  inter-richie:
+    
